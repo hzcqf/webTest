@@ -1,0 +1,24 @@
+#服务器配置
+server :
+  port : 8080
+  tomcat :
+    uriEncoding : UTF-8
+
+#Spring配置
+spring:
+  datasource:
+    url : jdbc:mysql://localhost:3306/todo?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    username : root
+    password : 123456
+    driverClassName : com.mysql.jdbc.Driver
+    testOnBorrow : true
+    validationQuery : SELECT 1
+  jpa:
+    database : MYSQL
+    showSql : false
+    hibernate:
+      ddl-auto : update
+      namingStrategy : org.hibernate.cfg.ImprovedNamingStrategy
+  properties:
+    hibernate:
+        dialect : org.hibernate.dialect.MySQL5Dialect
